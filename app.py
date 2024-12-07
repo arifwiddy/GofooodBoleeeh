@@ -3,12 +3,12 @@ import pandas as pd
 import plotly.express as px
 import numpy as np
 
-st.title("Kelompok GofooodBoleeeh")
-
-st.write("# Tugas Kelompok GofooodBoleeeh")
-
+#Arif
+st.title("Analisis Gofood")
 st.write("## Pendahuluan")
 st.write("Tuliskan di bagian ini latar belakang data apa yang dipilih, mengapa kelompok memilih data ini, dsb.")
+
+st.write("## Ringkasan Penjualan")
 
 st.write("## Deskripsi Data")
 st.write("Tuliskan di bagian ini deskripsi tentang data yang digunakan.")
