@@ -18,7 +18,7 @@ st.image("gofood.jpg")
 st.write("oleh Kelompok GofooodBoleeeh")
 st.write("""Anggota kelompok:
 1. Arif Widiatmoko (021002314005)
-2. Mukhlisha E (021002314003)
+2. Mukhlisha Hayuningtyas (021002314003)
 3. Safira Izzah (021002314006)
 
 Grup Kelas Khusus S1 Ekonomi Pembangunan""")
@@ -26,11 +26,44 @@ Grup Kelas Khusus S1 Ekonomi Pembangunan""")
 
 ##mba lisha
 st.write("## Pendahuluan")
-st.write(".........")
+st.markdown("""
+<div style="text-align: justify;">
+Gofood merupakan layanan Gojek yang melayani food delivery service di Indonesia. Sebagai bagian dari Grup Gojek, GoFood mengalami peningkatan pesanan yang tinggi sepanjang tahun 2019 di mana meningkat hingga 133% (Januari hingga Agustus) dibandingkan periode yang sama tahun lalu. Jika dilihat dari pangsa pasarnya, Go-Food telah menguasai 47% pangsa pasar di Indonesia atau senilai dengan 1,74 US Dollar (Setyowati, 2021). Keberadaan layanan GoFood telah memberikan dampak signifikan dalam mendorong pertumbuhan Usaha Mikro, Kecil, dan Menengah (UMKM) di sektor kuliner lokal. Melalui platform ini, para pengusaha kuliner dapat memperluas jangkauan pasar mereka secara digital, meningkatkan visibilitas produk, dan mengakses pelanggan yang lebih luas. Menurut survei yang dilakukan oleh Alvara Research Center, GoFood menjadi platform paling populer di kalangan UMKM kuliner, dengan 86,6% responden menggunakan layanan ini untuk menjual produk mereka. Selain itu, data dari Gojek menunjukkan bahwa 99% dari lebih dari 1,4 juta mitra usaha GoFood merupakan UMKM kuliner. Hal ini menegaskan peran penting GoFood dalam ekosistem UMKM di Indonesia.
+</div>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<div style="text-align: justify;">
+Dalam hal ini lokus yang menjadi sorotan adalah DKI Jakarta, Surabaya, dan Medan. Pasalnya, Melihat dari data survei Alvara Research Center, mayoritas UMKM kuliner di kota-kota besar Indonesia, termasuk Jakarta, Surabaya, dan Medan, memilih GoFood sebagai platform utama untuk menjual produk mereka, dengan persentase mencapai 86,6%. Selain itu, data internal Gojek menunjukkan bahwa dari sekitar 1 juta mitra GoFood di seluruh Indonesia, 99% di antaranya merupakan UMKM lokal. Kehadiran GoFood di kota-kota besar ini tidak hanya memperluas akses pasar bagi UMKM kuliner, tetapi juga mendorong pertumbuhan ekonomi lokal melalui peningkatan penjualan dan pembukaan cabang baru.
+</div>
+""", unsafe_allow_html=True)
+
+
+st.markdown("""
+<div style="text-align: justify;">
+Dengan berkembangnya layanan berbasis digital, seperti aplikasi Gojek dengan fitur GoFood, perilaku konsumen di sektor kuliner di kota-kota besar Indonesia, seperti Jakarta, Surabaya, dan Medan, mengalami perubahan yang signifikan. Dalam tulisan ini, akan dibahas mengenai analisis keputusan pembelian pada aplikasi GoFood di ketiga kota tersebut pada tahun 2021. Analisis ini didasarkan pada data mentah yang diambil dari Kaggle, sebanyak 45.195 entri, yang mencakup berbagai informasi penting terkait perilaku konsumen, pola pemesanan, informasi diskon, serta kategori makanan dan minuman yang paling diminati.
+</div>
+""", unsafe_allow_html=True)
+
+
+st.markdown("""
+<div style="text-align: justify;">
+Studi ini akan menggunakan pendekatan deskriptif, seperti analisis statistik, wordcloud untuk memvisualisasikan kategori populer, serta klasterisasi untuk mengidentifikasi pola pembelian berdasarkan data GoFood. Dengan pendekatan ini, penelitian diharapkan dapat memberikan wawasan yang bermanfaat bagi UMKM kuliner dalam meningkatkan keterlibatan dengan pelanggan. Selain itu, temuan ini juga berpotensi mendukung UMKM dalam merancang strategi pemasaran yang lebih efektif, seperti pemanfaatan diskon, penyesuaian menu, dan optimalisasi layanan berbasis lokasi.
+</div>
+""", unsafe_allow_html=True)
+
 
 ##mba lisha
 st.write("## Deskripsi Data")
-st.write(".........")
+st.write("Dalam menganalisis data pemesanan Gofood, data yang dibutuhkan di antaranya sebagai berikut:")
+
+st.write("1.	Merchant Name : Variabel ini mencantumkan nama mitra usaha (merchant) yang terdaftar di platform GoFood. Data ini penting untuk mengidentifikasi mitra usaha yang berkontribusi dalam layanan GoFood, serta untuk analisis distribusi aktivitas merchant di berbagai kategori dan area.")
+st.write("2.	Merchant Area : Area geografis tempat merchant beroperasi. Dalam konteks kota besar seperti Jakarta, Surabaya, dan Medan, variabel ini dapat digunakan untuk mengelompokkan data berdasarkan wilayah, sehingga memudahkan analisis pola geografis, preferensi konsumen di masing-masing kota, dan pengaruh lokasi terhadap keputusan pembelian.")
+st.write("3.	Category : Kategori produk atau jenis makanan yang ditawarkan, misalnya makanan roti, makanan barat, minuman, atau aneka nasi.")
+st.write("4.	Display : Deskripsi visual atau tampilan produk di platform yang lebih  mengarah pada pengelompokkan jenis pemesanan yang diinginkan konsumen.")
+st.write("5.	Product : Nama produk atau menu yang ditawarkan. Variabel ini memungkinkan analisis produk terlaris, mengidentifikasi menu favorit konsumen, serta melihat tren kuliner berdasarkan data penjualan.")
+st.write("6.	Price/harga produk : Analisis variabel ini penting untuk memahami strategi penentuan harga oleh merchant dan bagaimana harga memengaruhi keputusan pembelian konsumen. Data ini juga bisa digunakan untuk analisis statistik deskriptif.")
+st.write("7.	Discount : Diskon yang ditawarkan oleh merchant atau platform. Variabel ini sangat relevan untuk menganalisis peran promosi dalam menarik konsumen, mengidentifikasi efektivitas diskon, serta kaitannya dengan volume transaksi.")
 
 
 
@@ -288,7 +321,15 @@ st.write("Tuliskan butir-butir kesimpulan dari analisis.")
 
 st.write("## Referensi / Daftar Pustaka")
 st.write("1. Ariq Syahalam, R. (2021). Indonesia food delivery Gofood product list. Kaggle. https://www.kaggle.com/datasets/ariqsyahalam/indonesia-food-delivery-gofood-product-list/code")
-st.write("2.........................")
+st.write(" 2.	‘Punya 1 Juta Mitra, GoFood Siap Bersaing-Halaman 1’, teknologi.bisnis.com, 2024 < https://teknologi.bisnis.com/read/20220131/266/1495410/punya-1-juta-mitra-gofood-siap-bersaing > [accessed 18 December 2024].")
+st.write("3.	Larkhin Destamar, D., & Aryani, L. (n.d.). ANALISIS KEPUTUSAN PEMBELIAN PADA PENGGUNA APLIKASI GOJEK FITUR GOFOOD (Vol. 2).")
+st.write("3.	Strategi Pemasaran Online dengan Aplikasi Gojek Menggunakan Fitur Gofood. (2024).")
+st.write("4.	Widyaswara, I. W. E. (2018). Begini Potret Perpustakaan Daerah Bali di Era Milenial, Masih Pakai Cara Jadul di Zaman Digital - Halaman 2 - Tribun-bali.com. Bali.Tribunnews.Com.")
+st.write("5.	 ‘Gofood Jadi Platform Paling Laku untuk Jual Makanan UMKM pada 2022-Halaman 1’, databoks.katadata.co.id, 2024 < https://databoks.katadata.co.id/produk-konsumen/statistik/a892971e0af01b9/gofood-jadi-platform-paling-laku-untuk-jual-makanan-umkm-pada-2022?utm_ > [accessed 18 December 2024].")
+st.write("6.	 ‘Punya 1 Juta Mitra, GoFood Siap Bersaing-Halaman 1’, teknologi.bisnis.com, 2024 < https://teknologi.bisnis.com/read/20220131/266/1495410/punya-1-juta-mitra-gofood-siap-bersaing > [accessed 18 December 2024].")
+
+
+
 
 st.title(" Terima Kasih! 😊🙏")
          
