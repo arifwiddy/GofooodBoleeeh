@@ -13,7 +13,7 @@ import matplotlib.patches as mpatches
 import matplotlib.gridspec as gridspec
 
 
-st.title(" :bar_chart: Analisis Gofood")
+st.title(" :bar_chart: Analisis Pola Diskon, Preferensi Produk, dan Dominasi Brand pada Layanan GoFood di Tiga Kota Besar Indonesia")
 st.image("gofood.jpg")
 st.write("oleh Kelompok GofooodBoleeeh")
 st.write("""Anggota kelompok:
@@ -299,7 +299,7 @@ else:
                               labels={"x": "Produk", "y": "Frekuensi"})
             st.plotly_chart(fig_city)
     # Tombol download hasil clustering
-    st.subheader("Download Data Hasil Cluster")
+        st.subheader("Download Data Hasil Cluster")
     output_data = data.copy()
     output_csv = output_data.to_csv(index=False).encode('utf-8')
     st.download_button(label="Download Hasil Clustering", data=output_csv, file_name='clustered_gofood_data.csv',
@@ -310,17 +310,28 @@ else:
 
 
 
-
-
 #Mba Izzah
 st.write("## Analisis")
-st.write("Buat analisis sederhana dari visualisasi data yang muncul di bagian sebelumnya.")
+st.write("""- Dari data statistic dasar data gofood di kota besar di Indonesia seperti Jakarta, Medan dan Surabaya dapat disimpulkan bahwa terkumpul 45.195 data, dengan harga diskon 2.738 data, dikumpulkan data harga dengan rata-rata 43.878,5139, data harga diskon dengan rata-rata 46.482,9737""")
+
+st.write("""- Pada bab informasi diskon dapat dianalisa bahwa pada kota Jakarta Sebagian merchatnya tidak memberikan diskon, sama halnya seperti kota Jakarta, Kota Medan mayoritas tidak memberikan diskon, dan Surabaya juga menerapkan pola yang serupa dengan hanya memberikan diskon pada merchant yang sangat sedikit. Hal ini juga ditunjukkan dari grafik rata-rata persentase diskon di setiap kota yang mana pada kota Jakarta memiliki rata-rata persentase diskon terendah (sekitar 15%),  pada kota Medan memiliki rata-rata persentase diskon tertinggi (sekitar 18%) sedangkan pada kota Surabaya Rata-rata persentase diskon berada di antara Jakarta dan Medan (sekitar 17%).""")
+
+st.write("""- Pada bagian WordCloud untuk setiap kategori merepresentasikan kata apa yang paling berkolerasi dalam setiap kelompok. Sebagai contoh, pada kelompok Kopi/Minuman/Roti direpresentasikan dengan kata Sajian, khas dan kopi. Contoh lain pada kelompok Jajanan/Sweets direpresentasikan dengan kata Topping, Donat dan Coklat.""")
+
+st.write("""- Urutan brand yang paling mendominasi order di kota Jakarta dari yang paling tinggi adalah brand Lawson, diikuti brand mcdonald, dapur coklat, michelle bakery dan kfc. Di Kota Medan dari yang paling tinggi adalah brand Choco Bakery, Bika Ambon Zulaikha, Zeribowl, Fritto Chicken dan terakhir Chicken Crush. Sedangkan di Kota Surabaya dimulai dengan brand yang paling tinggi adalah brand Holland Bakery, Kampoeng Roti, Haus, Satria Roti dan Warung Pindo""")
+
+st.write("""- Pada bagian cluster data dibagi menjadi cluster dengan produk yang tidak diskon ditandai dengan cluster 0, sedangkan cluster dengan produk yang diskon ditandai dengan cluster 1. Di Kota Jakarta, produk yang paling tinggi tidak memberikan diskon adalah red velvet, sedangkan produk yang paling tinggi memberikan diskon adalah rice. Sedangkan di Kota medan, produk yang paling tinggi tidak memberikan diskon adalah chicken penyet, sedangkan produk yang paling tinggi memberikan diskon adalah chocolate cheese. Di Kota Surabaya, produk yang paling tinggi tidak memberikan diskon adalah rice putih, sedangkan produk yang paling tinggi memberikan diskon adalah egg mata sapi.""")
 
 st.write("## Kesimpulan")
-st.write("Tuliskan butir-butir kesimpulan dari analisis.")
+st.markdown("""
+<div style="text-align: justify;">
+Data GoFood di kota besar Indonesia seperti Jakarta, Medan, dan Surabaya menunjukkan bahwa mayoritas merchant tidak memberikan diskon, dengan rata-rata persentase diskon terendah di Jakarta (15%), tertinggi di Medan (18%), dan Surabaya di antaranya (17%). Analisis WordCloud menunjukkan kata-kata khas di setiap kategori makanan, seperti "kopi" dan "topping." Dominasi brand berbeda di tiap kota, misalnya Lawson di Jakarta, Choco Bakery di Medan, dan Holland Bakery di Surabaya. Data cluster menunjukkan bahwa produk tanpa diskon mendominasi di semua kota, seperti Red Velvet di Jakarta, Chicken Penyet di Medan, dan Rice Putih di Surabaya, sementara produk dengan diskon lebih bervariasi, seperti Rice di Jakarta dan Egg Mata Sapi di Surabaya. Hal ini mencerminkan pola diskon yang terbatas dan preferensi brand yang beragam antar kota.
+</div>
+""", unsafe_allow_html=True)
+
 
 st.write("## Referensi / Daftar Pustaka")
-st.write("1. Ariq Syahalam, R. (2021). Indonesia food delivery Gofood product list. Kaggle. https://www.kaggle.com/datasets/ariqsyahalam/indonesia-food-delivery-gofood-product-list/code")
+st.write("1. Ariq Syahalam, R. (2022). Indonesia food delivery Gofood product list. Kaggle. https://www.kaggle.com/datasets/ariqsyahalam/indonesia-food-delivery-gofood-product-list/code")
 st.write(" 2.	‘Punya 1 Juta Mitra, GoFood Siap Bersaing-Halaman 1’, teknologi.bisnis.com, 2024 < https://teknologi.bisnis.com/read/20220131/266/1495410/punya-1-juta-mitra-gofood-siap-bersaing > [accessed 18 December 2024].")
 st.write("3.	Larkhin Destamar, D., & Aryani, L. (n.d.). ANALISIS KEPUTUSAN PEMBELIAN PADA PENGGUNA APLIKASI GOJEK FITUR GOFOOD (Vol. 2).")
 st.write("3.	Strategi Pemasaran Online dengan Aplikasi Gojek Menggunakan Fitur Gofood. (2024).")
